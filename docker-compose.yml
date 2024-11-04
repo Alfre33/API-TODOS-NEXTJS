@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  todosDB:
+    image: postgres:15.3
+    container_name: todos-db
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=alfredo
+      - POSTGRES_PASSWORD=1012
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
